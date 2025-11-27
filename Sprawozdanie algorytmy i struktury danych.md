@@ -1,6 +1,6 @@
-## Kod do zadania (3.2);
+# Kod do zadania (3.2);
 
-`
+```C++
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -91,4 +91,4 @@ int main()
 
     return 0;
 }
-`
+```
