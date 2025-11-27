@@ -3,7 +3,7 @@
 ## Data: 27.11.2025
 - ## Autorzy wykonanych poniżej algorytmów:
     - Bartłomiej Podstawek nr indeksu 184285.
-    - Maria Panek 
+    - Maria Panek - niezła szprycha
 
 ## Tematy otrzymanych zadań:
 
@@ -274,8 +274,14 @@ c) Min zbioru: 0, Max zbioru: 99
  Liczba wystapien: 1
 ```
 
-## Wnioski:
+## Wnioski: 
 
- - 
+Zadanie 3.2: Algorytm ten jest ulepszoną wersją metody siłowej (brute-force). Zastosowana optymalizacja w pętli (N - maxL) pozwala uniknąć części zbędnych porównań, jednak przy dużej ilości danych nadal jest mało wydajna.
 
+Zadanie 3.3: To rozwiązanie jest najszybsze dla danych o znanym i niewielkim zakresie. Wykorzystanie tablicy liczników (metoda kubełkowa) eliminuje zagnieżdżone pętle.
 
+## Konkluzja:
+
+Wydajność: Algorytm z tablicą liczników (Zadanie 3.3) jest zdecydowanie najbardziej wydajny – osiąga złożoność liniową O(N), co widać po drastycznie niższej liczbie operacji (708 vs 20 000).
+
+Zastosowanie: Metoda z Zadania 3.2 sprawdza się tylko na małych zbiorach danych. Metoda z Zadania 3.3 jest idealna, gdy znamy zakres wartości (np. oceny, wiek), ale zużywa więcej pamięci RAM.
