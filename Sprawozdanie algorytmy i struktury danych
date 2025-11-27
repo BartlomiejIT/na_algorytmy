@@ -1,0 +1,94 @@
+## Kod do zadania (3.2);
+
+`
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    const int N = 200;
+    int D[N], i, j, L, W, maxL, maxW;
+
+    // Zmienne do zadania:
+    long long lo = 0; // licznik operacji
+    int minVal = 100, maxVal = -1;
+
+    // Generujemy dane D[ ]
+    srand(time(NULL));
+    for (i = 0; i < N; i++)
+        D[i] = rand() % 100;
+    
+        if (D[i] < minVal) minVal = D[i];
+        if (D[i] > maxVal) maxVal = D[i];
+
+    // Wyszukujemy najczęstszą wartość
+    maxL = 0;
+    maxW = D[0] - 1;
+
+    for (i = 0; i < N - maxL; i++)
+    {
+        lo++;
+
+        W = D[i];
+
+        lo++;
+
+        if (maxW != W)
+        {
+            L = 1;
+            for (j = i + 1; j < N; j++)
+                lo++;
+                if (D[j] == W) { L++; }
+            
+            lo++;
+            if (L > maxL)
+            {
+                maxL = L;
+                maxW = W;
+            }
+        }
+    }
+
+    // Wypisanie tablicy
+    for (i = 0; i < N; i++)
+        if (D[i] == maxW)
+            cout << " >" << setw(2) << D[i];
+        else
+            cout << setw(4) << D[i];
+
+    cout << endl << endl;
+
+    // Podstawowy wynik
+    cout << "Dominanta (najczesciej wystepujaca wartosc): " << maxW << endl;
+    cout << "Liczba wystapien: " << maxL << endl;
+
+    // Liczba operacji
+    cout << "Liczba operacji (lo): " << lo << endl;
+
+    // Czy wartosc jest blizej min czy max
+    cout << "Min w tablicy: " << minVal << endl << "Max w tablicy: " << maxVal << endl;
+    int distMin = abs(maxW - minVal);
+    int distMax = abs(maxW - maxVal);
+
+    cout << "Odleglosc od min: " << distMin << endl;
+    cout << "Odleglosc od max: " << distMax << endl;
+
+    if (distMin < distMax)
+        cout << "Wniosek: Dominanta jest blizej wartosci ! MINIMALNEJ !" << endl << endl;
+    else if (distMin > distMax)
+        cout << "Wniosek: Dominanta jest blizej wartosci ! MAKSYMALNEJ !" << endl << endl;
+    else
+        cout << "Wniosek: Dominanta jest posrodku (rowna odleglosc)." << endl << endl;
+    
+    // Procent danych
+    double procent = ((double)maxL / N) * 100.0;
+    cout << "Dominanta stanowi " << fixed << setprecision(2) << procent << "% wszystkich danych." << endl << endl;
+
+    return 0;
+}
+`
