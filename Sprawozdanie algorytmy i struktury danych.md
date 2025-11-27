@@ -2,8 +2,8 @@
 
 ## Data: 27.11.2025
 - ## Autorzy wykonanych poniżej algorytmów:
-    - Bartłomiej Podstawek nr indeksu 184285.
-    - Maria Panek nr 184275.
+    - Bartłomiej Podstawek nr indeksu - 184285.
+    - Maria Panek nr indeksu - 184275.
 
 ## Tematy otrzymanych zadań:
 
